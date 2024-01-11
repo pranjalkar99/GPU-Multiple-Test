@@ -13,7 +13,6 @@ services:
           devices:
             - driver: nvidia
               capabilities: [gpu]
-              device_ids: ['0']
               count: 1
 
   model_1:

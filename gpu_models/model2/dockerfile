@@ -9,7 +9,8 @@ COPY requirements.txt .
 
 # Install the required dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-
+ENV TF_FORCE_GPU_ALLOW_GROWTH=true
+ENV TF_XLA_FLAGS=--tf_xla_auto_jit=2
 # Copy the application code to the working directory
 COPY . .
 

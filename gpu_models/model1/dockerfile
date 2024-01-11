@@ -13,6 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application code to the working directory
 COPY . .
 
+ENV TF_FORCE_GPU_ALLOW_GROWTH=true
+ENV TF_XLA_FLAGS=--tf_xla_auto_jit=2
 
 # Set the entrypoint command to run the Flask app
 CMD ["python", "flask_gpu1.py"]

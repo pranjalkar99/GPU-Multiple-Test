@@ -11,7 +11,8 @@ services:
           devices:
             - driver: nvidia
               capabilities: [gpu]
-              device_ids: [0]
+              device_ids: ["0"]
+
 
   model_1:
     build:
@@ -24,7 +25,8 @@ services:
           devices:
             - driver: nvidia
               capabilities: [gpu]
-              device_ids: [0]
+              device_ids: ["0"]
+
 
   model_2:
     build:
@@ -37,4 +39,5 @@ services:
           devices:
             - driver: nvidia
               capabilities: [gpu]
-              device_ids: [0]
+              device_ids: ["0"]
+

@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 services:
   main_service:
     build:
@@ -10,7 +10,6 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              count: 1
               capabilities: [gpu]
 
   model_1:
@@ -23,7 +22,6 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              count: 1
               capabilities: [gpu]
 
   model_2:
@@ -36,5 +34,4 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              count: 1
               capabilities: [gpu]

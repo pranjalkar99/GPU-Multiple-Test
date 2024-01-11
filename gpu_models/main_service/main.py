@@ -11,13 +11,13 @@ def hello_world():
 def run_model(model_number):
     if model_number == 1:
         try:
-            response = requests.get('http://model1:5001/predict')
+            response = requests.get('http://model1:5051/predict')
             print(response)
         except requests.exceptions.ConnectionError:
             return "gpu 1 unavailable"
     elif model_number == 2:
         try:
-            response = requests.get('http://model1:5002/predict_mobilenet')
+            response = requests.get('http://model1:5052/predict_mobilenet')
             print(response)
         except requests.exceptions.ConnectionError:
             return "gpu 2 unavailable"

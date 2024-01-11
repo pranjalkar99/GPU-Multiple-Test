@@ -6,39 +6,36 @@ services:
       context: ./main_service
     ports:
       - "5050:5050"
-    # runtime: nvidia  # Ensure the NVIDIA runtime is specified
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           capabilities: [gpu]
-    #           count: all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 
   model_1:
     build:
       context: ./model1
     ports:
       - "5051:5051"
-    # runtime: nvidia  # Ensure the NVIDIA runtime is specified
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           capabilities: [gpu]
-    #           count: all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 
   model_2:
     build:
       context: ./model2
     ports:
       - "5052:5052"
-    # runtime: nvidia  # Ensure the NVIDIA runtime is specified
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           capabilities: [gpu]
-    #           count: all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

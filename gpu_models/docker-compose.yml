@@ -4,16 +4,16 @@ services:
     build:
       context: ./main_service
     ports:
-      - "5000:5000"
+      - "5050:5050"
 
   model_1:
     build:
       context: ./model1
     ports:
-      - "5001:5001"
+      - "5051:5051"
 
   model_2:
     build:
       context: ./model2
     ports:
-      - "5002:5002"
+      - "5052:5052"

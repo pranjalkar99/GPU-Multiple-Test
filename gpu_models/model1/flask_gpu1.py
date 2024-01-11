@@ -40,4 +40,4 @@ def predict_resnet():
     return jsonify({'predictions': predictions.shape, 'gpu': len(tf.config.list_physical_devices('GPU')),'model':model_url})
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0',port=5002)
+    app.run(debug=True,host='0.0.0.0',port=5051)

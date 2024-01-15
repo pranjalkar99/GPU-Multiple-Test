@@ -1,5 +1,7 @@
 # Use the official Python image as the base image
 FROM python:3.10
+
+# Install necessary dependencies for GPU support
 FROM nvidia/cuda:11.3.1-cudnn8-devel-ubuntu20.04
 
 # Set the working directory in the container
@@ -14,6 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application code to the working directory
 COPY . .
 
+# Set environment variables for TensorFlow GPU compatibility
 ENV TF_FORCE_GPU_ALLOW_GROWTH=true
 ENV TF_XLA_FLAGS=--tf_xla_auto_jit=2
 

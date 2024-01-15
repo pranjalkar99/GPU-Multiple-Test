@@ -24,7 +24,7 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              # count: 1
+              count: 1
               capabilities: [gpu]
 
   model_2:
@@ -37,5 +37,5 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              # count: 1
+              count: 1
               capabilities: [gpu]
